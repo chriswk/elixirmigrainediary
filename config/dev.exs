@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :migrainediary, Migrainediary.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "migrainediary_dev",
+  password: "migrainediary_dev",
   database: "migrainediary_dev",
   hostname: "localhost",
   pool_size: 10
