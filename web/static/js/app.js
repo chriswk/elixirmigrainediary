@@ -13,6 +13,11 @@
 // to also remove its path from "config.paths.watched".
 import "deps/phoenix_html/web/static/js/phoenix_html"
 
+export var App = {
+  run: function run() {
+    console.log("Hello");
+  }
+}
 // Import local files
 //
 // Local files can be imported directly using relative
