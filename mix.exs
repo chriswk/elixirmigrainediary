@@ -37,7 +37,8 @@ defmodule Migrainediary.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:plug_ribbon, "~> 0.2.0"},
-     {:scrivener, "~> 1.0"}]
+     {:scrivener, "~> 1.0"},
+     {:credo, "~> 0.1.9", only: [:dev, :test]}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
