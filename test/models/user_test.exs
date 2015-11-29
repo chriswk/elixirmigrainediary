@@ -3,11 +3,12 @@ defmodule Migrainediary.UserTest do
 
   alias Migrainediary.User
 
-  @valid_attrs %{encrypted_password: "some content", username: "some content"}
+  @valid_attrs %{password: "password", password_confirmation: "password", username: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
     changeset = User.changeset(%User{}, @valid_attrs)
+    IO.puts changeset.errors
     assert changeset.valid?
   end
 
