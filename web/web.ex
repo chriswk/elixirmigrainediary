@@ -28,8 +28,8 @@ defmodule Migrainediary.Web do
   def controller do
     quote do
       use Phoenix.Controller
-
       alias Migrainediary.Repo
+      alias Migrainediary.User
       import Ecto.Model
       import Ecto.Query, only: [from: 1, from: 2]
 

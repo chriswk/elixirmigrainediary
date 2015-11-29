@@ -16,8 +16,14 @@ defmodule Migrainediary.Router do
 
   scope "/", Migrainediary do
     pipe_through :browser # Use the default browser stack
+    get "/", SessionController, :new
+    post "/login", SessionController, :create
+    get "/logout", SessionController, :delete
 
-    get "/", PageController, :index
+    get "/registration", RegistrationController, :new
+    post "/registration", RegistrationController, :create
+
+    get "/pages", PageController, :index
   end
 
   scope "/api", Migrainediary do
