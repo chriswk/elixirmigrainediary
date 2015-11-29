@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :migrainediary, Migrainediary.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "migrainediary_dev",
+  password: "migrainediary_dev",
   database: "migrainediary_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
