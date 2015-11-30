@@ -3,12 +3,14 @@ defmodule Migrainediary.Device do
 
   schema "devices" do
     field :device_id, :string
-
+    field :device_name, :string
+    field :form_factor, :string
+    field :is_mobile, :boolean
     timestamps
   end
 
   @required_fields ~w(device_id)
-  @optional_fields ~w()
+  @optional_fields ~w(device_name form_factor is_mobile)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
