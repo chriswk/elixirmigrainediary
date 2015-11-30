@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Phoenix!</title>
+    <title>How's your head?</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -15,7 +15,6 @@
     <div class="container" role="main">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
         </ul>
         <span class="logo"></span>
       </div>
@@ -26,7 +25,8 @@
       <%= @inner %>
 
     </div> <!-- /container -->
-    <script src="//cdn.jsdelivr.net/fingerprintjs2/0.8.0/fingerprint2.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fingerprintjs2/0.9.0/fingerprint2.min.js"></script>
+    <script type="text/javascript" src="//wurfl.io/wurfl.js"></script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
     <script>require("web/static/js/app").App.run();</script>
   </body>

@@ -21,8 +21,4 @@
       "main": "request.js"
     }
   },
-  "dependencies": {
-    "fingerprintjs2": "~0.9.0",
-    "request": "~2.67.1"
-  }
 }
