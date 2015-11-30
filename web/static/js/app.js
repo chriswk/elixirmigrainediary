@@ -12,10 +12,11 @@
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
 import "deps/phoenix_html/web/static/js/phoenix_html"
-
+import { Fingerprint } from 'web/static/js/fingerprinting'
 export var App = {
   run: function run() {
     console.log("Hello");
+    Fingerprint.run();
   }
 }
 // Import local files

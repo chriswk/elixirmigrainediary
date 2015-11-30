@@ -26,6 +26,7 @@
       <%= @inner %>
 
     </div> <!-- /container -->
+    <script src="//cdn.jsdelivr.net/fingerprintjs2/0.8.0/fingerprint2.min.js"></script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
     <script>require("web/static/js/app").App.run();</script>
   </body>

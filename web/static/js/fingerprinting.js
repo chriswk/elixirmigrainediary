@@ -1,8 +1,11 @@
 "use strict";
-let Fingerprint2 = require("fingerprintjs2")
-export var migraineFingerprint = {
-  getPrint: function () {
-    console.log("Hello from fingerprint");
-    console.log(f);
+
+export var Fingerprint = {
+  run: function run() {
+    new Fingerprint2().get((res, comp) => {
+      console.log(res);
+      console.dir(comp);
+    });
+    console.log("Hello from fp");
   }
 }

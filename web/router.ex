@@ -30,6 +30,7 @@ defmodule Migrainediary.Router do
     pipe_through :api
 
     resources "/migraines", MigraineController, except: [:new, :edit]
+    resources "/devices", DeviceController, except: [:new, :edit]
   end
   # Other scopes may use custom stacks.
   # scope "/api", Migrainediary do
