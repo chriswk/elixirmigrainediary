@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :mdiary, Mdiary.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "mdiary",
+  password: "mdiary",
   database: "mdiary_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

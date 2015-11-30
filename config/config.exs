@@ -27,3 +27,15 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+config :joken, config_module: Guardian.JWT
+
+config :guardian, Guardian,
+  issuer: "MDiary",
+  ttl: { 30, :days },
+  verify_issuer: true,
+  secret_key: "itFl!*z&bppOyb$E5*G09AEciQEk03cAQzz2zOPh",
+  serializer: Mdiary.GuardianSerializer,
+  permissions: %{
+    default: [:read_profile, :write_profile]
+  }

@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :mdiary, Mdiary.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "mdiary",
+  password: "mdiary",
   database: "mdiary_dev",
   hostname: "localhost",
   pool_size: 10
