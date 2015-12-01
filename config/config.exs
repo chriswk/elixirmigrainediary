@@ -37,5 +37,6 @@ config :guardian, Guardian,
   secret_key: "itFl!*z&bppOyb$E5*G09AEciQEk03cAQzz2zOPh",
   serializer: Mdiary.GuardianSerializer,
   permissions: %{
-    default: [:read_profile, :write_profile]
+    default: [:read_profile, :write_profile, :read_migraine, :write_migraine],
+    admin: [:dashboard, :manage_devices, :manage_users, :manage_migraines]
   }

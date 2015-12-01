@@ -1,5 +1,31 @@
-<h2>Login</h2>
+<%= form_for @changeset, login_path(@conn, :create), [method: :post], fn f -> %>
+  <h2 class="form-signin-heading">Please sign in</h2>
+  <%= if f.errors != [] do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below:</p>
+      <ul>
+        <%= for {attr, message} <- f.errors do %>
+          <li><%= humanize(attr) %> <%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= render "form.html", changeset: @changeset,
-                        action: login_path(@conn, :create),
-                        conn: @conn %>
+  <div class="form-group">
+    <label for="email" class="sr-only">Email</label>
+    <%= email_input f, :email, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label for="password" class="sr-only">Password</label>
+    <%= password_input :user, :password, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Login", class: "btn btn-lg btn-primary btn-block" %>
+    <%= link("Sign up",
+      to: user_path(@conn, :new),
+      class: "btn btn-success pull-right"
+    ) %>
+  </div>
+<% end %>
